@@ -12,9 +12,14 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('Deploy') {
+        stage('Deploy to UAT') {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying UAT....'
+            }
+        }
+        stage('Deploy to PROD') {
+            steps {
+                echo 'Deploying Prod....'
             }
         }
     }
